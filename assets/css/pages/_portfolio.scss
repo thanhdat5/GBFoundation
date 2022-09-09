@@ -1,0 +1,64 @@
+.gb-our-portfolio {
+  .row {
+    --bs-gutter-x: 30px;
+  }
+  .gb-op-content {
+    .gb-op-card {
+      display: flex;
+      flex-direction: column;
+      background: #ecf9f5;
+      border: 1px solid $gb-button-bg-color;
+      border-radius: 8px;
+      margin-bottom: 50px;
+      height: calc(100% - 50px);
+      &:hover{
+        .gb-op-card-image {
+          img{
+            transform: scale(1.1);
+          }
+        }
+      }
+      .gb-op-card-image {
+        height: 211px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        background-color: $gb-white-color;
+        img {
+          max-width: 100%;
+          object-fit: contain;
+          transform-origin: center center;
+          transition: all ease-in-out .3s;
+        }
+      }
+      .gb-op-card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex: 1;
+        padding: 24px 24px 26px;
+        .gb-op-card-description {
+          margin-bottom: 9px;
+          @include gb-text-base;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          color: $gb-primary-color-black;
+        }
+        .gb-op-card-action {
+          a {
+            @include gb-text-base;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            text-decoration-line: underline;
+            color: $gb-accent-color-dark-green;
+            transition: all ease-in-out 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.gb-title {
+  @include gb-text-base;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  &.large {
+    font-size: 62px;
+    line-height: 62px;
+    margin-bottom: 15px;
+  }
+  &.medium {
+    font-size: 44px;
+    line-height: 120%;
+    margin-bottom: 10px;
+  }
+}
+h1,
+.h1,
+.gb-h1 {
+  @include gb-text-base;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 130%;
+  letter-spacing: -0.04em;
+  margin-bottom: 6px;
+}
+h2,
+.h2,
+.gb-h2 {
+  @include gb-text-base;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+h3,
+.h3,
+.gb-h3 {
+  @include gb-text-base;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.03em;
+  margin-bottom: 13px;
+}
+body,
+.gb-text {
+  @include gb-text-base;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+.gb-text-2 {
+  @include gb-text-base;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+.gb-small-text {
+  @include gb-text-base;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13px;
+}
+.gb-caption-text {
+  @include gb-text-base;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}

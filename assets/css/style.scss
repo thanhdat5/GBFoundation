@@ -1,0 +1,167 @@
+// Core
+@import "core/variables";
+@import "core/mixins";
+@import "core/typography";
+@import "core/button";
+@import "core/form";
+@import "core/card";
+// Components
+@import "components/header";
+@import "components/footer";
+@import "components/page";
+// Pages
+@import "pages/homepage";
+@import "pages/works";
+@import "pages/portfolio";
+@import "pages/about-us";
+body {
+  @include gb-text-base;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba($color: $gb-accent-color-dark-green, $alpha: .5);
+}
+.gb-loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background-color: rgba($color: $gb-white-color, $alpha: 0.9);
+}
+
+.gb-loader-element {
+  width: 50px;
+  height: 50px;
+  background:$gb-accent-color-dark-green;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  top: 50%;
+  margin-top: -25px;
+}
+
+.gb-loader-text {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba($gb-accent-color-dark-green, 0.5);
+  top: 50%;
+  margin-top: 25px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+// initial style
+@-webkit-keyframes deTranslateIn {
+  30% {
+    -webkit-transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg)
+      translateZ(20px) scale(0.95);
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: rotateX(65deg) rotateY(0deg) rotateZ(45deg)
+      translateZ(0px) scale(0.85);
+    opacity: 0;
+  }
+}
+
+@keyframes deTranslateIn {
+  30% {
+    -webkit-transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg)
+      translateZ(20px) scale(0.95);
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) translateZ(20px)
+      scale(0.95);
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: rotateX(65deg) rotateY(0deg) rotateZ(45deg)
+      translateZ(0px) scale(0.85);
+    transform: rotateX(65deg) rotateY(0deg) rotateZ(45deg) translateZ(0px)
+      scale(0.85);
+    opacity: 0;
+  }
+}
+
+.gb-loader-element {
+  opacity: 0;
+  &:nth-of-type(1) {
+    -webkit-transform: rotateX(70deg) rotateY(0deg) rotateZ(45deg)
+      translateZ(30px);
+    transform: rotateX(70deg) rotateY(0deg) rotateZ(45deg) translateZ(30px);
+    -webkit-animation: deTranslateIn 1.5s ease-in infinite 500ms;
+    animation: deTranslateIn 1.5s ease-in infinite 500ms;
+  }
+  &:nth-of-type(2) {
+    -webkit-transform: rotateX(70deg) rotateY(0deg) rotateZ(45deg)
+      translateZ(60px);
+    transform: rotateX(70deg) rotateY(0deg) rotateZ(45deg) translateZ(60px);
+    -webkit-animation: deTranslateIn 1.5s ease-in infinite 700ms;
+    animation: deTranslateIn 1.5s ease-in infinite 700ms;
+  }
+  &:nth-of-type(3) {
+    -webkit-transform: rotateX(70deg) rotateY(0deg) rotateZ(45deg)
+      translateZ(90px);
+    transform: rotateX(70deg) rotateY(0deg) rotateZ(45deg) translateZ(90px);
+    -webkit-animation: deTranslateIn 1.5s ease-in infinite 800ms;
+    animation: deTranslateIn 1.5s ease-in infinite 800ms;
+  }
+}
+
+// large-square
+@-webkit-keyframes deScaleIn {
+  80% {
+    -webkit-transform: rotateX(65deg) rotateY(0deg) rotateZ(45deg) scale(1.25);
+    opacity: 0.1;
+  }
+  100% {
+    -webkit-transform: rotateX(65deg) rotateY(0deg) rotateZ(45deg) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes deScaleIn {
+  80% {
+    -webkit-transform: rotateX(65deg) rotateY(0deg) rotateZ(45deg) scale(1.25);
+    transform: rotateX(65deg) rotateY(0deg) rotateZ(45deg) scale(1.25);
+    opacity: 0.1;
+  }
+  100% {
+    -webkit-transform: rotateX(65deg) rotateY(0deg) rotateZ(45deg) scale(1);
+    transform: rotateX(65deg) rotateY(0deg) rotateZ(45deg) scale(1);
+    opacity: 0;
+  }
+}
+
+.gb-loader-large-square {
+  width: 70px;
+  height: 70px;
+  background: $gb-accent-color-dark-green;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  top: 50%;
+  margin-top: -35px;
+  -webkit-transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) scale(0);
+  transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg) scale(0);
+  opacity: 0;
+  -webkit-animation: deScaleIn 3s linear infinite 500ms;
+  animation: deScaleIn 3s linear infinite 500ms;
+}
+
+@media (max-width: 767px) {
+  .container {
+    --bs-gutter-x: 40px;
+  }
+}

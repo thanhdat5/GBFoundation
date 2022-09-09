@@ -1,0 +1,49 @@
+.gb-page-content {
+  background-color: $gb-background-color;
+  padding-top: 107px;
+  @media (max-width: 767px) {
+    padding-top: 81px;
+  }
+}
+.gb-page-banner {
+  padding-top: 73px;
+  padding-bottom: 160px;
+  @media (max-width: 767px) {
+    padding-bottom: 80px;
+  }
+  .gb-page-subtitle {
+    @include gb-text-base;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: $gb-black-color;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .gb-page-title {
+    @include gb-text-base;
+    font-weight: 800;
+    font-size: 90px;
+    line-height: 62px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: $gb-primary-color-black;
+    margin-bottom: 40px;
+    @media (max-width: 767px) {
+      font-size: 60px;
+    }
+  }
+  .gb-page-description {
+    @include gb-text-base;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: $gb-primary-color-dark-gray;
+    width: 708px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
