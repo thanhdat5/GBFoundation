@@ -1199,6 +1199,7 @@ body,
   background-color: #ffffff;
 }
 .gb-our-portfolio .gb-op-content .gb-op-card .gb-op-card-image img {
+  max-height: 108px;
   max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;

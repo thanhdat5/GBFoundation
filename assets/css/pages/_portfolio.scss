@@ -26,6 +26,7 @@
         padding: 40px;
         background-color: $gb-white-color;
         img {
+          max-height: 108px;
           max-width: 100%;
           object-fit: contain;
           transform-origin: center center;
