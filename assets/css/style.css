@@ -1037,12 +1037,47 @@ body,
   }
 }
 .gb-works .gb-w-pikasso {
-  padding-bottom: 250px;
+  padding-bottom: 98px;
+}
+.gb-works .gb-w-contact {
+  padding: 33px 0 38px;
+  margin-bottom: 82px;
+  background: #c2eade;
+  box-shadow: 0px 4px 10px rgba(0, 132, 244, 0.2), 0px -2px 10px rgba(0, 132, 244, 0.4);
+}
+.gb-works .gb-w-contact h3 {
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  color: #181a1c;
+  margin-bottom: 0;
 }
 @media (max-width: 991px) {
-  .gb-works .gb-w-pikasso {
-    padding-bottom: 120px;
+  .gb-works .gb-w-contact h3 {
+    font-size: 38px;
   }
+}
+@media (max-width: 767px) {
+  .gb-works .gb-w-contact h3 {
+    font-size: 26px;
+  }
+}
+.gb-works .gb-w-contact a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all ease-in-out 0.3s;
+  padding: 16px 27px;
+  background: #ffffff;
+  border-radius: 16px;
+  font-weight: 850;
+  font-size: 16px;
+  line-height: 18px;
+  color: #181a1c;
+}
+.gb-works .gb-w-contact a:hover {
+  color: #595e65;
 }
 .gb-works .gb-w-ezwallet {
   padding-bottom: 100px;
